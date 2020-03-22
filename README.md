@@ -28,6 +28,8 @@ Connect the electronic components according to the [schematic](https://www.midi.
 
 [Here](https://youtu.be/GxfHijjn0ZM) is a nice video tutorial on connecting the hardware using a breadboard.
 
+If you are using the MIDI Shield, make sure the SJ1 jumper (Rx sel) is set to HARD-RX (it should be by default).
+
 ## Building and uploading:
 Install [Arduino IDE](https://www.arduino.cc/en/main/software), clone or download the repository. Launch the .ino file. 
 ### configuration:
@@ -46,7 +48,7 @@ Follow the standard procedure for [uploading to Arduino Leonardo](https://www.ar
 Beware that if you set `define login true` after `system_startup_time` your password will by automatically typed, followed by `enter`, and after `app_startup_time` you will get `Ctrl+F4` followed by `Command+o`.
 
 ## Session file names:
-**It is absolutley essential to have the session folder, and file names configured, as described below !.**
+**It is absolutley essential to have the session folder, and file names configured, as described below !**
 
 There are 128 MIDI programs, all of which correspond to their session files. Each session file has it's own coressponding midi program. The session files are given names begining with program number in `HEX` format, starting from `00` ending at `7F`. It is Important not to have other files in the session directory. The order from `00` to `7F` must remain undisturbed. After the preset number, you can write a short description of the preset. 
 
